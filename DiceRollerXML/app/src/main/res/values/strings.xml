@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Dice Roller XML</string>
-    <string name="roll">Roll</string>
-    <string name="msg_double">Selamat, anda dapat dadu double!</string>
-    <string name="msg_not_lucky">Anda belum beruntung!</string>
-</resources>
