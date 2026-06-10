@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WWM Weapons Compose</string>
+    <string name="top_weapons">Top Weapons</string>
+    <string name="all_weapons">All Weapons</string>
+    <string name="description_label">Desc: </string>
+    <string name="detail_description_label">Deskripsi:</string>
+    <string name="btn_info">Info</string>
+    <string name="btn_detail">Detail</string>
+    <string name="btn_web_info">Web Info</string>
+</resources>

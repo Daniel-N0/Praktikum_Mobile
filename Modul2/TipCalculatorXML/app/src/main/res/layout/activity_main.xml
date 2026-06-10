@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate_tip"
+            android:textColor="@color/text_secondary"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cost_of_service_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:startIconDrawable="@drawable/ic_money"
+            app:startIconTint="@color/icon_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cost_of_service_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/bill_amount"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tip_percentage_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:startIconDrawable="@drawable/ic_percent"
+            app:startIconTint="@color/icon_color">
+
+            <AutoCompleteTextView
+                android:id="@+id/tip_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tip_percentage"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp">
+
+            <TextView
+                android:id="@+id/round_up_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/round_up_switch"
+                android:layout_marginEnd="16dp"
+                android:layout_centerVertical="true"
+                android:text="@string/round_up_tip"
+                android:textSize="16sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                app:trackTint="@color/icon_color"
+                app:thumbTint="@color/accent"
+                android:id="@+id/round_up_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tip_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tip_amount"
+            android:textSize="43sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+    </LinearLayout>
+</ScrollView>
